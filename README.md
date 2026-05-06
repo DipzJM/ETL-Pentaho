@@ -1,15 +1,34 @@
-O grupo empresarial que detém a MediaFlix, a Catchall Group, também possui participações em empresas do
-ramo alimentar e da distribuição. Como boa prática de gestão, pretende ter uma visão consolidada das vendas
-dos vários negócios participados. Nesse sentido, em paralelo com o início da implementação de um
-Datawarehouse para a MediaFlix, está a finalizar a implementação para a SnacksMart. Esta última, é uma
-empresa multinacional de distribuição generalista com várias lojas físicas instaladas na Europa e ainda, nos
-Estados Unidos, México e Canadá, às quais junta a distribuição porta-a-porta através de canais eletrónicos
-(mobile e web) disponibilizados aos clientes no final do ano passado. A SnacksMart emprega mais de um milhar
-de pessoas. Ao contrário da maioria das lojas físicas no mercado de distribuição, é solicitado aos clientes da
-SnacksMart um registo / identificação para acesso às lojas ou aos canais eletrónicos. Este método facilita o
-processo de compra e entrega de mercadorias ao cliente assim como os pagamentos.
-Os sistemas de informação de suporte à operação da SnacksMart consistem num ERP (Moskatel) e numa
-plataforma de comércio eletrónico (Bakalhoa). A generalidade dos dados mestre são armazenados e geridos no
-sistema Moskatel que disponibiliza aos restantes sistemas da organização um conjunto de WebServices que
-permitem efetuar a interligação de dados mestre entre os vários sistemas. No caso de existirem dados mestre
-particulares de cada plataforma, os mesmos serão geridos pelos próprios sistemas individualmente. 
+# Projeto de Data Warehouse: SnacksMart (Grupo Catchall)
+
+## 📝 Visão Geral
+Este repositório documenta a implementação do Data Warehouse (DW) da **SnacksMart**, uma empresa do grupo **Catchall Group**. 
+
+O Catchall Group, que detém também a MediaFlix, está a levar a cabo uma estratégia de gestão baseada na consolidação de dados de vendas de todas as suas participadas (setor alimentar, distribuição e media) para obter uma visão de negócio integrada e transversal.
+
+## 🏢 Sobre a SnacksMart
+A SnacksMart é uma multinacional de distribuição generalista com uma operação de larga escala:
+
+* **Presença Geográfica:** Lojas físicas na Europa, Estados Unidos, México e Canadá.
+* **Canais de Venda:**
+    * Lojas físicas tradicionais.
+    * Distribuição porta-a-porta através de canais eletrónicos (**Mobile** e **Web**), lançados no final do ano passado.
+* **Recursos Humanos:** Mais de 1000 colaboradores.
+* **Modelo de Operação:** Ao contrário do retalho tradicional, a SnacksMart exige o **registo/identificação obrigatória** do cliente para acesso às lojas e plataformas digitais. Este modelo otimiza o processo de compra, entrega e pagamentos.
+
+## 💻 Ecossistema Tecnológico
+A infraestrutura de suporte à operação da SnacksMart é composta por dois sistemas principais que servem de fontes de dados para o DW:
+
+### 1. ERP Moskatel
+* **Função:** Sistema central de gestão e repositório principal de **dados mestre**.
+* **Interoperabilidade:** Disponibiliza um conjunto de **WebServices** que permitem a sincronização de dados mestre com os restantes sistemas da organização.
+
+### 2. Bakalhoa (Plataforma de E-commerce)
+* **Função:** Gestão das operações de comércio eletrónico (vendas online).
+* **Dados:** Gere autonomamente os dados mestre específicos da plataforma que não existam no sistema central.
+
+## 🚀 Objetivos da Implementação
+A implementação do DW da SnacksMart decorre em paralelo com a da MediaFlix, focando-se em:
+
+1.  **Consolidação de Vendas:** Unificar os dados provenientes do ERP e da plataforma de e-commerce.
+2.  **Visão 360º do Cliente:** Aproveitar o sistema de identificação obrigatória para traçar o perfil de consumo multicanal (físico vs. digital).
+3.  **Padronização de Dados Mestre:** Garantir a integridade da informação através da interligação via WebServices entre o Moskatel e o Bakalhoa.
